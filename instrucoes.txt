@@ -1,0 +1,47 @@
+
+- Separar as funções de saque, deposíto e extrato
+
+ - Criar duas novas funções:
+    cadastrar usuario,
+    cadastrar conta bancaria
+
+
+Depósito:
+deve receber argumentos apenas por posicao (posicional only)        (saldo, valor,...)
+sugestão argumentos: saldo, valor, extrato. sugestão de retorno: saldo e extrato
+
+Saque:
+deve receber argumentos apenas por nome (keyword only)      (saldo=...,valor=...)
+sugestão argumento: saldo, valor,extrato,limite, num_saque,lim_saque. sugestão de retornos: saldo e extrato
+
+Extrato:
+deve receber argumentos por posicao e nome. \ *
+argumentos posicionais: saldo           argumentos nomeados: extrato
+
+Cadastrar Usuario:
+- armazenar usuários em uma lista (dict)
+- usario vai conter:
+    nome
+    dt nasc
+    CPF
+    endereço
+- endereço é uma str com formato: logradouro - nro - bairro - cidade/sigla estado
+- deve ser armazenado somente os números do CPF (str)
+- não podemos cadastrar 2 usuarios com o mesmo CPF
+
+Cadastrar Conta Bancaria:
+- deve armazenar contas em uma lista (dict)
+- conta vai conter:
+    agencia
+    nro da conta
+    usuario (CPF)
+- nro da conta é sequencial, iniciando em 1
+- nro da agencia é fixo, '0001'
+- usuario pode ter mais de uma conta mas, uma conta só pode pertencer a um usuario
+
+--------DICA------
+
+para vincular um usuario a uma conta, filtre a lista de usuarios buscando pelo CPF informado para cada usuario da lista
+
+
+
